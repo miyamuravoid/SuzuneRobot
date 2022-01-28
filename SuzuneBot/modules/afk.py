@@ -1,12 +1,12 @@
 import random, html
 
-from SuzuneBot import dispatcher
-from SuzuneBot.modules.disable import (
+from hori_san import dispatcher
+from horisan.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from SuzuneBot.modules.sql import afk_sql as sql
-from SuzuneBot.modules.users import get_user_id
+from hori_san.modules.sql import afk_sql as sql
+from hori_san.modules.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
@@ -38,13 +38,13 @@ def afk(update: Update, context: CallbackContext):
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("{} is now away!{}".format(fname, notice))
+        update.effective_message.reply_text("{} baka is now offline!{}".format(fname, notice))
     except BadRequest:
         pass
 
 
 @run_async
-def no_longer_afk(update: Update, context: CallbackContext):
+def no_longer_offline_from_group(update: Update, context: CallbackContext):
     user = update.effective_user
     message = update.effective_message
 
@@ -58,14 +58,8 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} is here!",
-                "{} is back!",
-                "{} is now in the chat!",
-                "{} is awake!",
-                "{} is back online!",
-                "{} is finally here!",
-                "Welcome back! {}",
-                "Where is {}?\nIn the chat!",
+                "Welcome back Baka! {}",
+                "See biggest baka just joined us!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
@@ -124,7 +118,7 @@ def reply_afk(update: Update, context: CallbackContext):
 
 
 def check_afk(update, context, user_id, fst_name, userc_id):
-    if sql.is_afk(user_id):
+    if sql.baka_is_afk(user_id):
         user = sql.check_afk_status(user_id)
         if int(userc_id) == int(user_id):
             return
