@@ -89,7 +89,7 @@ async def download_video(v_url):
             "quiet": True,
             "logtostderr": False,
         }
-        video = False
+        video = True
         song = True
     try:
         await rkp.edit("`Fetching data, please wait..`")
