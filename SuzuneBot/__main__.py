@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 #kang with Credit Bitches
 PM_START_TEXT = """
 ʜᴇʟʟᴏ ᴛʜᴇʀᴇ! ɪ ᴀᴍ ʜᴏʀɪ ꜱᴀɴ. ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇᴅ ʙᴏᴛ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴄʜᴀᴛꜱ! ᴇꜰꜰᴇᴄᴛɪᴠᴇʟʏ ᴀɴᴅ ᴇꜰꜰɪᴄɪᴇɴᴛʟʏ
-𝐏𝐫𝐞𝐬𝐬 /help 𝐓𝐨 𝐒𝐞𝐞 𝐀𝐥𝐥 𝐌𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐋𝐢𝐬𝐭.
+ᴘʀᴇꜱꜱ /help ᴛᴏ ꜱᴇᴇ ᴀʟʟ ᴍʏ ᴄᴏᴍᴍᴀnᴅ ʟɪꜱᴛ.
 """
 G_START_TEXT = """
 Hello Hori San Is Here.
@@ -90,13 +90,13 @@ Here's The Settings Of This Bot[.](https://telegra.ph/file/74bdf31be780e12ac7733
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or . or !.\n",
 )
 
-SuzuneBot_IMG = "https://telegra.ph/file/a3868caeaf1b3e55ccc90.jpg"
+SuzuneBot_IMG = "https://telegra.ph/file/940b63c7bdc98386fcc9d.mp4"
 
-SuzuneBotG_IMG = "https://telegra.ph/file/819b0d3b4d55636d19f59.jpg"
+SuzuneBotG_IMG = "https://telegra.ph/file/9e95d6f3e8eeaa4ae4ea8.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting [Nobita](https://t.me/TheNobita).
- Those who cannot provide monetary support are welcome to help us develop the bot at @VegaCodes.
+ You can support the project by contacting [VOID](https://t.me/voidxtoxic).
+ Those who cannot provide monetary support are welcome to help us develop the bot at @hori_san_support.
  """
 
 IMPORTED = {}
@@ -214,8 +214,8 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="➕ᴀᴅᴅ 𝐒ᴜᴢᴜɴᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ️➕️",
-                                url="t.me/Suzune_Superbot?startgroup=true".format(
+                                text="🔹ᴀᴅᴅ 𝐒ᴜᴢᴜɴᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ️🔹",
+                                url="t.me/horisan_robot?startgroup=true".format(
                                     context.bot.username
                                 ),
                             ),
@@ -223,17 +223,17 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ",
-                                url=f"https://t.me/{SUPPORT_CHAT}",
+                                url=f"https://t.me/+71XOhhxB731lMWM1",
                             ),
                             InlineKeyboardButton(
                                 text="ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ️",
-                                url="https://t.me/SuzuneSuperbot",
+                                url="https://t.me/+BUINrWmuWalhNGU1",
                             ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text="ᴅᴇᴠs️",
-                                url="https://t.me/SuzuneSuperbot/4",
+                                url="t.me/voidxtoxic",
                             ),
                         ],
                     ]
