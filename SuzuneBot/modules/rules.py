@@ -1,6 +1,10 @@
 from typing import Optional
 
 import SuzuneBot.modules.sql.rules_sql as sql
+from horisan.modules.disable import (
+    DisableAbleCommandHandler,
+    DisableAbleMessageHandler,
+)
 from SuzuneBot import dispatcher
 from SuzuneBot.modules.helper_funcs.chat_status import user_admin
 from SuzuneBot.modules.helper_funcs.string_handling import markdown_parser
@@ -68,8 +72,8 @@ def send_rules(update, chat_id, from_pm=False):
         )
     else:
         update.effective_message.reply_text(
-            "The group admins haven't set any rules for this chat yet. "
-            "This probably doesn't mean it's lawless though...!"
+            "The group admins are bakas didn't set rules yet. "
+            "Still keep group peaceful...!"
         )
 
 
